@@ -94,7 +94,9 @@ public class UsersServiceImpl implements UsersService{
 
         List <AlbumResponseModel> albumsList = null;
        // try {
-              albumsList = albumsServiceClient.getAlbums(userId);
+        logger.info("Before Calling Albums microservice");
+        albumsList = albumsServiceClient.getAlbums(userId);
+        logger.info("After Calling Albums microservice");
        // } catch (FeignException feignException) {
        //     logger.error(feignException.getLocalizedMessage());
        //}
